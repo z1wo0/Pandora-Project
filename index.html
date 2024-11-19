@@ -138,6 +138,80 @@
         .dots .active {
             background-color: #717171;
         }
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Стиль для мобильных устройств */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+            header {
+                font-size: 1.5em;
+            }
+            .content {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Стиль для планшетов */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .container {
+                width: 90%;
+            }
+            header {
+                font-size: 1.75em;
+            }
+        }
+
+        /* Стиль для ноутбуков и десктопов */
+        @media (min-width: 901px) {
+            .container {
+                width: 80%;
+            }
+            header {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на наш сайт</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Основной контент</h2>
+            <p>Это простой пример адаптивного сайта. Измените размер окна браузера, чтобы увидеть, как изменяется макет.</p>
+        </div>
+    </div>
+</body>
+</html>
+
     </style>
 </head>
 <body class="light">
@@ -166,18 +240,26 @@
         <li><a href="https://t.me/JustChill016" target="_blank">@Боктаев Мерген</a></li>
     </ul>
 
+<style type="text/css">
+    .img{
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+    }
+</style>
+
     <p align="center"><h2>Галерея нашего проекта</h2>
     <p align="center"><div class="gallery">
-        <p align="center"><<img src="https://via.placeholder.com/600x400" alt="Пример изображения" class="active">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
-        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://cdn.culture.ru/images/bc0105ff-f8b4-5f30-82a2-e4ee25042a80" alt="Пример изображения" class="active img">
+        <p align="center"><img src="https://i.pinimg.com/736x/24/d7/dd/24d7dd29bee6e764cb788bff2a1679d6.jpg" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/ay/nature-black-and-white-white-relax.jpeg?auto=compress&fit=resize&w=1200&h=900&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/hv/the-winter-cat-domestic-cat.jpg?auto=compress&fit=resize&w=1200&h=750&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/lx/red-cat-the-winter-beauitful.jpg?auto=compress&fit=resize&w=1200&h=901&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/fv/view-animal-cute-pet-hwzu.jpeg?auto=compress&fit=resize&w=1200&h=924&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/ks/animal-wildlife-cat-mammal.jpeg?auto=compress&fit=resize&w=1200&h=900&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/fv/cat-animal-residential.jpg?auto=compress&fit=resize&w=1200&h=800&display=large&domain=img1.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/bu/pet-cat-mammal-whisker.jpeg?auto=compress&fit=resize&w=1200&h=866&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
+        <p align="center"><img src="https://image.fonwall.ru/o/zf/animal-cute-pet-kitten.jpeg?auto=compress&fit=resize&w=1200&h=800&display=large&domain=img3.fonwall.ru" alt="Пример изображения" class="img">
         <p align="center"><div class="pagination">
             <button id="prev">❮</button>
             <button id="next">❯</button>
@@ -228,6 +310,58 @@
             <td>программист</td>
         </tr>
     </table>
+
+
+    <title>Кнопки</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 15px 20px;
+            margin: 10px;
+            background-color: #000000; /* Черный фон */
+            color: white; /* Белый текст */
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #333333; /* Темно-серый фон при наведении */
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82" class="button">ПРОГРАММИСТ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%92%D1%80%D0%B0%D1%87" class="button">ВРАЧ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B6%D0%B0%D1%80%D0%BD%D1%8B%D0%B9" class="button">ПОЖАРНЫЙ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D1%86%D0%B8%D1%8F" class="button">ПОЛИЦЕЙСКИЙ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%91%D1%83%D1%85%D0%B3%D0%B0%D0%BB%D1%82%D0%B5%D1%80" class="button">БУХГАЛТЕР</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C" class="button">УЧИТЕЛЬ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0_%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8" class="button">ФСБ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%A7%D0%A1_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8" class="button">МЧС</a>
+    <a href="https://en.wikipedia.org/wiki/National_Guard_Forces_Command" class="button">РОС.ГВАРДИЯ</a>
+    <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D0%B2%D0%BE%D0%BA%D0%B0%D1%82" class="button">АДВОКАТ</a>
+</div>
+
+</body>
+</html>
 
     <h2>Комментарии</h2>
     <div id="comments-section"></div>
