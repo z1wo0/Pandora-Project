@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <style type="text/css">
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light {
+            background-color: white;
+            color: black;
+        }
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+        body.red {
+            background-color: red;
+            color: white;
+        }
+        body.green {
+            background-color: green;
+            color: white;
+        }
+        body.blue {
+            background-color: blue;
+            color: white;
+        }
+        body.purple {
+            background-color: purple;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background: #555;
+        }
+        .post {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .post:hover {
+            transform: scale(1.02);
+        }
+        .comments {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+        #menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: none;
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #menu ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        #menu ul li:hover {
+            background: #f0f0f0;
+        }
+        .gallery {
+            position: relative;
+            text-align: center;
+        }
+        .gallery img {
+            display: none;
+        }
+        .gallery img.active {
+            display: block;
+        }
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dots span {
+            height: 10px;
+            width: 10px;
+            margin: 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dots .active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body class="light">
+
+<header>
+    <h1>Добро пожаловать на сайт Pandora project!</h1>
+    <button id="theme-toggle">Сменить тему</button>
+    <div id="menu-toggle">☰</div>
+</header>
+
+<div id="menu">
+    <ul>
+        <li>Главная</li>
+        <li>Помощь</li>
+        <li>О сайте</li>
+    </ul>
+</div>
+
+<div class="content">
+    <h2>Информация о проекте</h2>
+    <p>Приветствую путник! На этой странице вы можете получить информацию про этот проект. Мы занимаемся разработкой веб-приложений.</p>
+    <p>Вот ссылки на партнёров сайта:</p>
+    <ul>
+        <li><a href="https://t.me/Lahma_Danger" target="_blank">@Бекчанов Данияр</a></li>
+        <li><a href="https://t.me/Za1rX0" target="_blank">@Титаренко Святослав</a></li>
+        <li><a href="https://t.me/JustChill016" target="_blank">@Боктаев Мерген</a></li>
+    </ul>
+
+    <p align="center"><h2>Галерея нашего проекта</h2>
+    <p align="center"><div class="gallery">
+        <p align="center"><<img src="https://via.placeholder.com/600x400" alt="Пример изображения" class="active">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><img src="https://via.placeholder.com/600x400" alt="Пример изображения">
+        <p align="center"><div class="pagination">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+        <div class="dots"></div>
+    </div>
+
+    <h2>Таблица данных</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td></td>
+            <td>возраст</td>
+            <td>рост</td>
+            <td>вес</td>
+            <td>IQ</td>
+            <td>специальность</td>
+        </tr>
+        <tr>
+            <td>Тукаев Силуан</td>
+            <td>16</td>
+            <td>177см</td>
+            <td>82кг</td>
+            <td>200</td>
+            <td>программист</td>
+        </tr>
+        <tr>
+            <td>Бекчанов Данияр</td>
+            <td>17</td>
+            <td>179см</td>
+            <td>73кг</td>
+            <td>200</td>
+            <td>программист</td>
+        </tr>
+        <tr>
+            <td>Боктаев Мерген</td>
+            <td>16</td>
+            <td>185см</td>
+            <td>78кг</td>
+            <td>200</td>
+            <td>программист</td>
+        </tr>
+        <tr>
+            <td>Титаренко Святослав</td>
+            <td>17</td>
+            <td>183см</td>
+            <td>90кг</td>
+            <td>200</td>
+            <td>программист</td>
+        </tr>
+    </table>
+
+    <h2>Комментарии</h2>
+    <div id="comments-section"></div>
+    <textarea id="comment-input" rows="4" cols="50" placeholder="Ваш комментарий..."></textarea>
+    <button id="submit-comment">Оставить комментарий</button>
+
+    <p><strong>Сайт и проект были созданы:</strong> <a href="https://t.me/CTPAX_B_CEPDE4KE">@Тукаев Силуан</a></p>
+</div>
+
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        let themes = ['dark', 'red', 'green', 'blue', 'purple', 'light'];
+        let currentTheme = document.body.className;
+        let nextTheme = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+        document.body.className = nextTheme;
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.gallery img');
+    const dotsContainer = document.querySelector('.dots');
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+        updateDots(index);
+    }
+
+    function updateDots(index) {
+        dotsContainer.innerHTML = '';
+        images.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.toggle('active', i === index);
+            dot.addEventListener('click', () => showImage(i));
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    document.getElementById('submit-comment').addEventListener('click', () => {
+        const commentInput = document.getElementById('comment-input');
+        const comment = commentInput.value.trim();
+        if (comment) {
+            const commentDiv = document.createElement('div');
+            commentDiv.textContent = comment;
+            document.getElementById('comments-section').appendChild(commentDiv);
+            commentInput.value = '';
+        }
+    });
+
+    updateDots(currentIndex);
+</script>
+
+</body>
+</html>
